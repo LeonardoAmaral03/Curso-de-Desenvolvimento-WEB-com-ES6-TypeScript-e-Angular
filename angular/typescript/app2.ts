@@ -21,11 +21,22 @@ class Carro {
     }
 }
 
-let carroA = new Carro("Veloster", 3)
+class Concessionaria {
+    private endereco: string
+    private listaDeCarros: any
 
-console.log(carroA)
-carroA.acelerar()
-console.log(carroA)
-carroA.acelerar()
-carroA.acelerar()
-console.log(carroA)
+    constructor(endereco: string) {
+        this.endereco = endereco
+    }
+
+    public fornecerEndereco(): string {
+        return this.endereco
+    }
+
+    public mostrarListaDeCarros(): any {
+        return this.listaDeCarros
+    }
+}
+
+let concessionaria = new Concessionaria('Av Paulista')
+console.log(concessionaria)
