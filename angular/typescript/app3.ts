@@ -1,7 +1,8 @@
 import Carro from './Carro'
 import Moto from './Moto'
 
-let carro = new Carro('Veloster', 3)
+let carro = new Carro('veloster', 3)
+carro.acelerar()
 carro.acelerar()
 
 let moto = new Moto()
