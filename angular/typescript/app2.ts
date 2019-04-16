@@ -82,7 +82,7 @@ let concessionaria = new Concessionaria('Av Paulista', listaDeCarros)
 /* --- comprar o carro --- */
 let cliente = new Pessoa('João', 'veloster')
 
-concessionaria.mostrarListaDeCarros().map((carro: Carro) {
+concessionaria.mostrarListaDeCarros().map((carro: Carro) => {
 
     if (carro['modelo'] == cliente.dizerCarroPreferido()) {
         //comprar o carro
