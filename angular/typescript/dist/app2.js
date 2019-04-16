@@ -56,4 +56,13 @@ var carroC = new Carro('cerato', 4);
 var listaDeCarros = [carroA, carroB, carroC];
 var concessionaria = new Concessionaria('Av Paulista', listaDeCarros);
 /* --- exibir a lista de carros --- */
-console.log(concessionaria.mostrarListaDeCarros());
+//console.log(concessionaria.mostrarListaDeCarros())
+/* --- comprar o carro --- */
+var cliente = new Pessoa('João', 'veloster');
+concessionaria.mostrarListaDeCarros().map(function (carro) {
+    if (carro['modelo'] == cliente.dizerCarroPreferido()) {
+        //comprar o carro
+        cliente.comprarCarro(carro);
+    }
+});
+console.log(cliente.dizerCarroQueTem());
